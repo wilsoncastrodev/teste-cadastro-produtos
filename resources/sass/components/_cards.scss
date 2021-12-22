@@ -1,0 +1,15 @@
+.card {
+  box-shadow: -1px 3px 10px 0 rgba(29, 70, 102, 0.22);
+  padding: 17px 22px;
+  border-radius: 10px;
+  border: none;
+  height: auto;
+
+  &.card-simple {
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgb(82, 63, 105, 0.05);
+
+    .card-body {
+      padding: 18px 40px 34px;
+    }
+  }
+}

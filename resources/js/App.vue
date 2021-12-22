@@ -1,5 +1,9 @@
 <template>
-  <router-view></router-view>
+  <div
+    class="main-content main-content-login"
+  >
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

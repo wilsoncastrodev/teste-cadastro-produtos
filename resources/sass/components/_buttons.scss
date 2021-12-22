@@ -1,0 +1,18 @@
+.btn {
+  font-size: 1.0875rem;
+  color: $white;
+  border-radius: 4px;
+
+  &.btn-primary {
+    background: $blue;
+    border: none;
+
+    &:hover {
+      background: darken($blue, 3%);
+    }
+  }
+
+  &.btn-sm {
+    padding: 12px 20px;
+  }
+}
