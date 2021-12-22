@@ -1,9 +1,9 @@
 <template>
-  <router-view></router-view>
+  <h1>Produtos</h1>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "Products",
 };
 </script>
