@@ -22,6 +22,9 @@
                 autofocus
                 v-model="email"
               />
+              <small v-if="this.error.email" class="text-danger ms-1">
+                {{ this.error.email }}
+              </small>
             </div>
             <div class="form-group mb-4">
               <label class="mb-2" for="password">Senha</label>
@@ -34,6 +37,9 @@
                 autocomplete="current-password"
                 v-model="password"
               />
+              <small v-if="this.error.password" class="text-danger ms-1">
+                {{ this.error.password }}
+              </small>
             </div>
             <div class="form-group d-grid gap-2">
               <button
