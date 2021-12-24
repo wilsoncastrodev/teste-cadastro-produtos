@@ -1,5 +1,7 @@
 <template>
-  <h1>Produtos</h1>
+  <div class="container mt-5">
+    <h1>Produtos</h1>
+  </div>
 </template>
 
 <script>

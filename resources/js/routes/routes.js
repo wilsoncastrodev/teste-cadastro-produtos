@@ -14,21 +14,25 @@ export default {
       path: '/login',
       name: 'Login',
       component: Login,
+      meta: {guest: true}
     },
     {
       path: '/produtos',
       name: 'Products',
       component: Products,
+      meta: {requiresAuth: true}
     },
     {
       path: '/tags',
       name: 'Tags',
       component: Tags,
+      meta: {requiresAuth: true}
     },
     {
       path: '/relatorios',
       name: 'Reports',
       component: Reports,
+      meta: {requiresAuth: true}
     },
   ]
 }

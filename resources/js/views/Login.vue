@@ -20,7 +20,7 @@
                 required
                 autocomplete="email"
                 autofocus
-                v-model="email"
+                v-model="form.email"
               />
               <small v-if="this.error.email" class="text-danger ms-1">
                 {{ this.error.email }}
@@ -35,7 +35,7 @@
                 class="form-control px-3"
                 required
                 autocomplete="current-password"
-                v-model="password"
+                v-model="form.password"
               />
               <small v-if="this.error.password" class="text-danger ms-1">
                 {{ this.error.password }}
@@ -45,6 +45,7 @@
               <button
                 type="submit"
                 class="btn btn-primary btn-sm"
+                @click.prevent="handleSubmit"
               >
                 Entrar
               </button>
@@ -69,6 +70,7 @@
 </template>
 
 <script>
+import Auth from '../apis/Auth';
 import CardLogin from "../components/cards/CardLogin.vue";
 import AlertInfo from "../components/alerts/AlertInfo.vue";
 
@@ -81,16 +83,31 @@ export default {
   data() {
     return {
       logo: '/images/logo-promobit.svg',
-      email: "usuario@promobit.com.br",
-      password: "123123123",
-      error: {},
-      usersDefault: {
+      form: {
+        email: "",
+        password: "",
+      },
+      error: {
+        email: "",
+        password: ""
+      },
+     usersDefault: {
         user: {
           login: "usuario@promobit.com.br",
           pass: "123123123",
         },
       },
     };
+  },
+  methods: {
+    handleSubmit() {
+      Auth.login(this.form, this.$router).catch((error) => {
+          if(!error.response.data.success) {
+            this.error.email = error.response.data.data.email ? error.response.data.data.email[0] : '';
+            this.error.password = error.response.data.data.password ? error.response.data.data.password[0] : '';
+          }
+      });
+    },
   },
 };
 </script>

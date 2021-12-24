@@ -1,0 +1,72 @@
+.navbar {
+  background-color: $blue;
+  box-shadow: 1px 1px 5px 0 #163a56;
+
+  .nav-link {
+      font-size: 0.9375rem;
+      color: $white;
+      padding: 22px 12px;
+      letter-spacing: .5px;
+  }
+
+  .nav-profile {
+    color: $white;
+
+    &-letter {
+      background-color: rgba(6, 6, 6, 0.10);
+      display: inline-block;
+      margin-top: 12px;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      text-align: center;
+
+      span {
+          font-size: 1.8rem;
+          font-weight: 500;
+          letter-spacing: .5px;
+          color: $white;
+      }
+    }
+
+    &-name {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      span {
+          text-transform: uppercase;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+      .row {
+          min-width: 100%;
+
+          .navbar-brand {
+              font-size: 2.7rem;
+              padding: 0 0 7px 0;
+              margin: 0;
+          }
+
+          .navbar-menu-mobile {
+              overflow: auto;
+              white-space: nowrap;
+
+              .nav-link {
+                  font-size: 0.8rem;
+                  padding: 8px 15px;
+
+                  @include media-breakpoint-down(md) {
+                      &.router-link-active {
+                          border-bottom: 1px solid #f9f8f8;
+                          transition: width .5s ease-in-out 0s;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
