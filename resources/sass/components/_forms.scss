@@ -14,3 +14,55 @@ form {
     }
   }
 }
+
+.v-input {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: $white;
+  border: 1px solid #ced4da;
+  appearance: none;
+  height: 48px;
+  border-radius: 0.4rem;
+  color: $gray;
+  margin-left: 70px;
+  padding: 0.375rem 0.75rem;
+
+  &:focus {
+    border-color: $blue-600 !important;
+  }
+
+  .v-input__control {
+    height: 100%;
+
+    .v-input__slot {
+      height: 100%;
+
+      &::before,
+      &::after {
+        border: none !important;
+      }
+
+      .v-select__slot {
+        text-align: center;
+
+        .v-select__selections {
+          width: 40px;
+
+          .v-select__selection {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 1.5px;
+            font-size: 0.95rem;
+            color: $gray;
+          }
+        }
+
+        .v-input__append-inner {
+          width: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -44,6 +44,6 @@ class AuthController extends BaseController
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
-        return $this->sendResponse('Usuário deslogado', []);
+        return $this->sendResponse([], 'Usuário deslogado');
     }
 }

@@ -9,3 +9,9 @@ export const setUserCurrent = (user) => localStorage.setItem("user", JSON.string
 export const getUserCurrent = () => JSON.parse(JSON.parse(localStorage.getItem('user')));
 
 export const clearUserCurrent = () => localStorage.setItem('user', null);
+
+export const headers = {
+  headers: {
+    Authorization: `Bearer ${getToken()}`,
+  },
+}

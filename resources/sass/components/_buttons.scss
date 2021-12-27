@@ -12,7 +12,31 @@
     }
   }
 
+  &.btn-success {
+    background: $green;
+    border: none;
+
+    &:hover {
+      background: darken($green, 3%);
+    }
+  }
+
+  &.btn-light {
+    background: $gray-light;
+    border: none;
+    color: $gray;
+
+    &:hover {
+      background: darken($gray-light, 3%);
+    }
+  }
+
   &.btn-sm {
     padding: 12px 20px;
+  }
+
+  &.btn-xs {
+    padding: 8px 16px;
+    font-size: 1rem;
   }
 }

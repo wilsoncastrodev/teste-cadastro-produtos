@@ -1,0 +1,23 @@
+.mdi {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem !important;
+
+  &.mdi-chevron-left {
+    &::before {
+      content: "\f053";
+    }
+  }
+
+  &.mdi-chevron-right {
+    &::before {
+      content: "\f054";
+    }
+  }
+}
+
+.fas {
+  color: $gray;
+  font-size: 1.1rem;
+}

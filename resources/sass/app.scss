@@ -1,4 +1,5 @@
 // EXTERNAL DEPENDENCY
+@import '~vuetify/dist/vuetify.min';
 @import '~bootstrap/scss/bootstrap';
 
 // FONTS
@@ -12,5 +13,7 @@
 @import 'components/alerts';
 @import 'components/buttons';
 @import 'components/cards';
+@import 'components/datatables';
 @import 'components/forms';
+@import 'components/icons';
 @import 'components/navbar';
