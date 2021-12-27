@@ -44,18 +44,6 @@ class TagController extends BaseController
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $tag = Tag::find($id);
-        return $this->sendResponse($tag, 'Retorna a Tag "' . $tag->name . '"');
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

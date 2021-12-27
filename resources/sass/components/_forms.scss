@@ -1,6 +1,7 @@
 form {
   label {
-    color: $blue-600;
+    letter-spacing: 0.2px;
+    color: $gray;
   }
 
   .form-control {
@@ -37,6 +38,7 @@ form {
 
     .v-input__slot {
       height: 100%;
+      box-shadow: none !important;
 
       &::before,
       &::after {
@@ -64,5 +66,29 @@ form {
         }
       }
     }
+  }
+}
+
+.v-select--chips {
+  height: auto;
+  min-height: 48px;
+
+  .v-input__slot {
+    padding: 11px 12px 0 !important;
+
+    .v-label {
+      font-size: 14px;
+      top: calc(50% - 11px);
+    }
+
+    .v-chip {
+      margin-bottom: 7px !important;
+      border-radius: 8px;
+      background-color: $gray-light;
+    }
+  }
+
+  .v-text-field__details {
+    display: none;
   }
 }

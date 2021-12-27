@@ -41,4 +41,13 @@ a {
   }
 }
 
+.container {
+  padding-top: unset;
+  padding-bottom: unset;
+
+  div[class^='col'] {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+}
 
