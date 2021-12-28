@@ -1,7 +1,7 @@
 <template>
   <div class="container pb-5">
     <div class="row justify-content-center">
-      <div class="col-md-5 px-5">
+      <div class="col-md-9 col-lg-7 col-xl-5 px-md-5">
         <card-login>
           <div class="text-center mt-3 mb-4">
             <img :src="logo" >

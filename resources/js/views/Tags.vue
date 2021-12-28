@@ -1,10 +1,10 @@
 <template>
   <div class="container pt-4 pb-5">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-4 mb-4 mb-lg-auto">
         <tag-add @reload-table="reloadTable" ref="form" />
       </div>
-      <div class="col-8">
+      <div class="col-lg-8">
         <tags-list @edit-tag="editTag" @delete-tag="deleteTag" ref="list" />
       </div>
     </div>

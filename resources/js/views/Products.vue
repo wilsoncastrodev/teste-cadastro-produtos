@@ -1,10 +1,10 @@
 <template>
   <div class="container pt-4 pb-5">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-4 mb-4 mb-lg-auto">
         <product-add @reload-table="reloadTable" ref="form" />
       </div>
-      <div class="col-8">
+      <div class="col-lg-8">
         <products-list
           @edit-product="editProduct"
           @delete-product="deleteProduct"

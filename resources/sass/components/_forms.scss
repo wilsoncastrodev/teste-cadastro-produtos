@@ -48,6 +48,10 @@ form {
       .v-select__slot {
         text-align: center;
 
+        .v-label--active {
+          display: none;
+        }
+
         .v-select__selections {
           width: 40px;
 
@@ -66,6 +70,10 @@ form {
         }
       }
     }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
   }
 }
 

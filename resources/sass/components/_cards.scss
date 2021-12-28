@@ -12,6 +12,28 @@
 
     .card-body {
       padding: 18px 40px 34px;
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+  }
+
+  .v-card__title {
+    @include media-breakpoint-down(md) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      .v-input {
+        margin-top: 12px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .v-input {
+        width: 100%;
+      }
     }
   }
 }

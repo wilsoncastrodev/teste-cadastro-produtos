@@ -20,6 +20,10 @@ body {
   &-login {
     margin-left: 0;
     padding-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
   }
 }
 

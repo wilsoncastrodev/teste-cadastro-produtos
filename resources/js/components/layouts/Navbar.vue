@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-mobile d-flex d-md-none pb-0">
       <div class="container-fluid g-0">
         <div class="row g-0">
-          <div class="col-12 text-center mt-2 mb-3">
+          <div class="col-12 text-center mt-md-2 mb-md-3 p-2 p-md-auto">
             <img :src="logo" >
           </div>
           <div class="col-12">
