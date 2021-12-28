@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TagController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,6 @@ use App\Http\Controllers\Api\ProductController;
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+Route::get('reports', [ReportController::class, 'index'])->middleware('auth:sanctum');
 Route::apiResource('tags', TagController::class)->middleware('auth:sanctum');
 Route::apiResource('products', ProductController::class)->middleware('auth:sanctum');
